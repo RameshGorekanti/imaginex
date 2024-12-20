@@ -5,7 +5,7 @@ const Details = () => {
         <div className='flex justify-center'>
             <div className='flex justify-between w-[70%]'>
                 <div>
-                    <p className='text-xs'>Contact Us <br />
+                    <p className='text-xs font-semibold'>Contact Us <br />
                         Let’s Start a Project Together</p>
                     <p className='mt-6 text-xs'>We’d love to hear from you! <br />
                         Whether you have a question <br />
