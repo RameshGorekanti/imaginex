@@ -12,13 +12,13 @@ const Header = () => {
                         <nav className="flex justify-between items-center gap-2">
                            
                             <ul className="flex space-x-4">
-                                <li><a href="#" className="text-teal-600 hover:underline">Home</a></li>
-                                <li><a href="#" className="text-gray-800  hover:underline">Services</a></li>
-                                <li><a href="#" className="text-gray-800  hover:underline">Contact</a></li>
-                                <li><a href="#" className="text-gray-800  hover:underline">Portfolio</a></li>
+                                <li><a href="#" className="text-gray-800 hover:underline hover:text-teal-600">Home</a></li>
+                                <li><a href="#" className="text-gray-800  hover:underline hover:text-teal-600">Services</a></li>
+                                <li><a href="#" className="text-gray-800  hover:underline hover:text-teal-600">Contact</a></li>
+                                <li><a href="#" className="text-gray-800  hover:underline hover:text-teal-600">Portfolio</a></li>
                             </ul>
                            
-                            <a href="#" className="bg-yellow-400 text-black font-semibold px-8 py-1 rounded-3xl hover:bg-yellow-500">
+                            <a href="#" className="bg-yellow-400 text-black font-semibold px-8 py-1 rounded-3xl hover:bg-yellow-500 hover:text-white">
                                 Login
                             </a>
                         </nav>
