@@ -72,7 +72,7 @@ const ContactForm = () => {
 
             <button
                 type="submit"
-                className="inline-flex items-center px-6 py-2 bg-[#52c1ac] border border-transparent rounded-xl font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto sm:text-sm"
+                className="inline-flex items-center px-6 py-2 hover:text-white border border-transparent rounded-xl font-medium text-black bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto sm:text-sm"
             >
                 Submit
             </button>

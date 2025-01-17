@@ -8,14 +8,17 @@ import Meettheteam from "./Components/Meettheteam";
 import ContactUs from "./Components/ContactUs";
 import Details from "./Components/Details";
 import Footer from "./Components/Footer";
+import Innovative from "./Components/Innovative";
+import OurServices from "./Components/OurServices";
 
 export default function Home() {
   return (
-    <div >
-
+    <div>
       <Header />
       <Ourpassionate />
-      <LetusHelp />
+      <Innovative />
+      <OurServices />
+      {/* <LetusHelp /> */}
       <Whatweoffer />
       <Ourworkspeacks />
       <Meettheteam />

@@ -2,7 +2,7 @@ import React from 'react'
 
 const LetusHelp = () => {
     return (
-        <div className='flex justify-center h-screen'>
+        <div className='flex justify-center h-screen bg-[#52C1AC]'>
             <div className='w-[70%] grid grid-cols-2 items-center gap-4 relative'>
                 <div>
 

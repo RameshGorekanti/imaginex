@@ -54,7 +54,7 @@ const Ourworkspeacks = () => {
                             
                         </ul>
                         <div className=''>
-                    <button className='bg-yellow-400 text-black px-6 py-1 text-center rounded-3xl text-sm'>Learn More</button>
+                    <button className='bg-yellow-400 text-black px-6 py-1 text-center rounded-3xl text-sm hover:text-white '>Learn More</button>
                 </div>
 
                     </div>
