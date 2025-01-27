@@ -1,69 +1,117 @@
-import React from 'react'
+// components/Services.js
+'use client'
+import React, { useState } from "react";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
+import { BsPlayCircle } from "react-icons/bs";
 
 const Ourworkspeacks = () => {
-    return (
-        <div className='flex justify-center h-screen'>
-            <div className='w-[70%] relative'>
-                <div className='mt-36'>
-                    <p className=''>  Portfolio <br />
-                        <span className='font-semibold text-[25px] text-[#52c1ac]'> Our Work Speaks for Itself</span><br />
-                        <span className='text-[15px]'>
-                            Branding Projects<br />
-                            Learn more
-                            ModernTech Solutions: A complete brand overhaul including a new logo, business cards, and stationery.
-                            EcoLife Organics: A fresh, eco-friendly brand identity with a focus on sustainability
-                        </span>
-                    </p>
+  const slides = [
+    {
+      title: "Graphic Design",
+      description: [
+        "Logos & Branding",
+        "Business Cards",
+        "Brochures & Flyers",
+        "Posters & Banners",
+      ],
+      image:
+        "https://res.cloudinary.com/dagmm478n/image/upload/v1737957275/imagineX/Vector_uza0px.png",
+    },
+    {
+      title: "Web Development",
+      description: [
+        "Responsive Websites",
+        "E-commerce Platforms",
+        "Content Management Systems",
+        "Custom Web Applications",
+      ],
+      image:
+        "https://res.cloudinary.com/dagmm478n/image/upload/v1737957275/imagineX/Vector_uza0px.png",
+    },
+    {
+      title: "Digital Marketing",
+      description: [
+        "Social Media Management",
+        "SEO & SEM",
+        "Content Marketing",
+        "Email Campaigns",
+      ],
+      image:
+        "https://res.cloudinary.com/dagmm478n/image/upload/v1737957275/imagineX/Vector_uza0px.png",
+    },
+  ];
 
-                </div>
-                <div className="mt-5">
-                    <div className="grid grid-cols-3 gap-8">
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-                        <ul className="space-y-2 text-sm">
-                            <li className='font-bold'>Web Design Projects</li>
-                            <li>Fashionista Boutique: </li>
-                            <li>
-                                A stylish and responsive
-                                e-commerce site that captures
-                                the essence of modern fashion</li>
-                        </ul>
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
 
-                        <ul className="space-y-2 text-sm">
-                            <li className='font-bold'>TravelExplore: </li>
-                            <li>
-                                An immersive travel blog
-                                platform with integrated
-                                social media sharing features.
-                                Digital Marketing Campaigns
-                            </li>
-                        </ul>
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
 
-                        <ul className="space-y-2 text-sm">
-                            <li className='font-bold'>Summer Splash Event: </li>
-                            <li> Social media and email campaign that
-                                increased event attendance by 35%</li>
-                        </ul>
-                       
-                    </div>
-                    <div className='grid grid-cols-2 gap-6'>
-                    <ul className="space-y-2 text-sm">
-                            <li className='font-bold'>Summer Splash Event: </li>
-                            <li> Social media and email campaign that increased event attendance by 35%.
-                            </li>
-                            <li>Winter Wonderland Sale: Holiday promotion that boosted online sales by 50%.</li>
-                            
-                        </ul>
-                        <div className=''>
-                    <button className='bg-yellow-400 text-black px-6 py-1 text-center rounded-3xl text-sm hover:text-white '>Learn More</button>
-                </div>
+  return (
+    <div className="bg-[#F5F5F5] flex items-center justify-center">
+      <div className="w-[75%] p-10">
+        <h1 className="text-3xl font-bold text-gray-800 mb-6">Our Services</h1>
+        <h2 className="text-xl font-semibold text-teal-500 mb-8">
+          Our Work Speaks for Itself
+        </h2>
 
-                    </div>
-                </div>
-                
+        <div className="flex items-center space-x-8">
+          <button
+            onClick={handlePrev}
+            className="w-14 h-12 bg-teal-300 rounded-full flex items-center justify-center hover:bg-white"
+          >
+            <span className="text-2xl">
+              <IoIosArrowBack />
+            </span>
+          </button>
+
+          <div className="flex items-center w-full space-x-8">
+            <div className="w-1/2">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                {slides[currentSlide].title}
+              </h3>
+              <ul className="list-disc ml-6 text-gray-700">
+                {slides[currentSlide].description.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
             </div>
 
-        </div>
-    )
-}
+            <div className="w-1/2 relative">
+              <img
+                src={slides[currentSlide].image}
+                alt={slides[currentSlide].title}
+                className=""
+              />
+              <div className="absolute top-24 right-40">
+                <BsPlayCircle />
+              </div>
+            </div>
+          </div>
 
-export default Ourworkspeacks
+          <button
+            onClick={handleNext}
+            className="w-14 h-12 bg-teal-300 rounded-full flex items-center justify-center hover:bg-white"
+          >
+            <span className="text-2xl">
+              <IoIosArrowForward />
+            </span>
+          </button>
+        </div>
+
+        <div className="mt-8 text-center">
+          <button className="bg-yellow-400 text-black px-6 py-1 text-center rounded-3xl text-sm hover:text-white">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Ourworkspeacks;

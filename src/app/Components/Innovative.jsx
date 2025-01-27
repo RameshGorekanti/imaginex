@@ -25,7 +25,7 @@ const Innovative = () => {
               <img
                 src="https://res.cloudinary.com/dagmm478n/image/upload/v1737114101/imagineX/icons-01_1_gxbguy.png"
                 alt="pic"
-                className=" w-full h-36"
+                className=" w-40 h-36"
               />
             </div>
           </div>
